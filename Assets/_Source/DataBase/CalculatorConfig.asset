@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856d7ed2214d4719af9c1411e73064de, type: 3}
+  m_Name: CalculatorConfig
+  m_EditorClassIdentifier: 
+  ErrorSuffix: ERROR
+  HistoryTextPrefab: {fileID: 6682921900632554177, guid: 90ca771561167488fb7f61228f480103, type: 3}
+  BaseHeight: 500
+  ExpandendHeight: 825
+  supportedOperations: 00000000
