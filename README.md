@@ -1,2 +1,17 @@
 # Calculator
 Calculator-pro
+
+Не простой калькулятор в Unity по MVP.
+View рисует UI, Presenter координирует события и логику, Model (через Service) считает и хранит данные. Поддерживает разные операции (+,-,*,/. Настройка доступных операций из SO-конфига), историю, ошибки и сохранения.
+
+## СТРУКТУРА
+- **Bootstrap**: Bootstrapper.cs — entry point.
+- **Views**: CalculatorView.cs — главная вью с саб-вьюшками (input, button, history, error). ExpressionHistoryView.cs — скролл с текстами истории.
+- **Services**: CalculatorService.cs — расчёты, операции. SaveService.cs — save/load.
+- **Presenters**: CalculatorPresenter.cs — связывает вью и сервис, обрабатывает кнопки и сопутствующую им логику.
+- **Config**: CalculatorConfig.cs — ScriptableObject с доступными операциями и прочими настройками.
+
+## Как улучшить
+Внедрить DI, дабы не вручную прокидывать зависимости — меньше кода, проще тесты.
+Для истории использовать ObjectPool вместо Instantiate, чтоб не мусорить памятью.
+Разбить ICalculatorView на мелкие интерфейсы (по ISP), чтоб не тащить лишнее.
